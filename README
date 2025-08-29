@@ -1,0 +1,1 @@
+This is ready to run openvpn service that requires just running a compose file and exposing ports 943 and 9443
