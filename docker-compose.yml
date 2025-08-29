@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  openvpn-as:
+    image: openvpn/openvpn-as
+    container_name: openvpn-as
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    volumes:
+      - /srv/openvpn:/openvpn  # persistent storage
+    network_mode: host
+
